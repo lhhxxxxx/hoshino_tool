@@ -44,10 +44,10 @@ async def not_conflict(bot, event: CQEvent):
 
 def anti_conflict(f):
     """
-    用途：防止闲聊类插件（或任意全局匹配插件）在其他插件调用指令时触发
+    用途：防止 AI 聊天类插件（或任意全局匹配插件）在其他插件注册的指令被调用时触发
 
-    使用方法：在@sv.on_message('group')下
-    添加@anti_conflict
+    使用方法：在 @sv.on_message('group') 下
+    添加 @anti_conflict
     """
 
     @wraps(f)
